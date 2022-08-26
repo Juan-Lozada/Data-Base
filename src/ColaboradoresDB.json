@@ -1,0 +1,17 @@
+[
+    {
+    "id": "1",
+    "nombre": "Mario Fernandez",
+    "correo": "fdezmario@colaborador.com"
+    },
+    {
+    "id": "2",
+    "nombre": "Esther Bronson",
+    "correo": "estherdbron2@colaborador.com"
+    },
+    {
+    "id": "3",
+    "nombre": "Maira Martinez",
+    "correo": "mtnzmaira1@colaborador.com"
+    }
+]
