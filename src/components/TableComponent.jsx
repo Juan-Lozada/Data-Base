@@ -8,7 +8,7 @@ function TableComponent (props) {
     return (
         <>
             <div style={{ backgroundColor: '#464F41' }}>
-                <div className='bg-dark text-light p-4 mb-1'>
+                <div className='bg-dark text-light p-4   mb-1'>
                     <div className="container-fluid text-center text-md-left">
                         <div className="row">
                             <div className="col-md-12 mt-md-0 mt-3">

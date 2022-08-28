@@ -5,14 +5,21 @@ function BodyComponent(props) {
 
     const [buscarColaborador, setBuscarColaborador] = useState("");
 
-    const buscarColab = (e) => {
+    const inputBuscar = (e) => {
         setBuscarColaborador(e.target.value)
+        filtrarBusqueda(e.target.value)
+        console.log('busqueda: ' + e.target.value)
     }
 
-    const filtrarBusqueda = (props) => !buscarColaborador
-    ? props.colaboradores
-    : props.colaboradores.filter((colaborador) =>
-        colaborador.nombre.toLowerCase().includes(buscarColaborador.toLowerCase()))
+    const filtrarBusqueda = (busquedaFinal) => {
+        const resultadoBuscar = props.colaboradores.filter((colaborador)=>{
+            if(colaborador.nombre.toString().toLowerCase().includes(busquedaFinal.toLowerCase())
+            ){
+                return colaborador;
+            }
+        });
+        props.setColaboradores(resultadoBuscar);
+    }
 
     return (
         <>
@@ -35,7 +42,7 @@ function BodyComponent(props) {
                             placeholder="Buscar..."
                             className="me-2"
                             aria-label="Search"
-                            onChange={buscarColab}
+                            onChange={inputBuscar}
                         />
                         <Button style={{ backgroundColor: '#464F41', borderColor: 'black' }} variant='dark'>Buscar</Button>
                     </Form>

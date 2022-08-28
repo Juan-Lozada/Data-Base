@@ -12,15 +12,15 @@ function App() {
   
   const [colaboradores, setColaboradores] = useState(ColaboradoresDB);
 
-  const [buscarColaborador, setBuscarColaborador] = useState("")
-
   const guardarColaborador = (colaborador) => {
     setColaboradores([...colaboradores, colaborador])
   }
+
+  const dataColab = colaboradores;
   
   return (
     <>
-      < BodyComponent setBuscarColaborador={setBuscarColaborador} />
+      < BodyComponent colaboradores={colaboradores} setColaboradores={setColaboradores} />
         < FormColaboradores guardarColaborador={guardarColaborador}/>
       < TableComponent colaboradores={colaboradores} />
     
