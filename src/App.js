@@ -1,37 +1,29 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'
 import React from 'react';
-import ColaboradoresDB from './ColaboradoresDB.json';
+import ColaboradoresDB from './components/ColaboradoresDB';
 import {useState} from 'react';
 import FormColaboradores from './components/FormColaboradores';
-import NavbarComponent from './components/NavbarComponent';
+import TableComponent from './components/TableComponent'
 import FooterComponent from './components/FooterComponent';
-import TableComponent from './components/TableComponent';
+import BodyComponent from './components/BusquedaComponent';
 
 function App() {
   
   const [colaboradores, setColaboradores] = useState(ColaboradoresDB);
-  console.log(ColaboradoresDB)
+
+  const [buscarColaborador, setBuscarColaborador] = useState("")
 
   const guardarColaborador = (colaborador) => {
-    setColaboradores([...colaboradores, colaborador]);
-    console.log(guardarColaborador);
-  }
-
-  const eliminarColaborador = (e) => {
-    console.log("eliminarColaborador");
+    setColaboradores([...colaboradores, colaborador])
   }
   
   return (
     <>
-      < NavbarComponent />
-      < FormColaboradores 
-        guardarColaborador={guardarColaborador}
-      />
-      < TableComponent 
-        eliminarColaborador={eliminarColaborador}
-        colaboradores={colaboradores}
-      />
+      < BodyComponent setBuscarColaborador={setBuscarColaborador} />
+        < FormColaboradores guardarColaborador={guardarColaborador}/>
+      < TableComponent colaboradores={colaboradores} />
+    
       < FooterComponent />
     </>
   );

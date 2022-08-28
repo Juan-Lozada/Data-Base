@@ -1,11 +1,14 @@
 import React from 'react';
-import {Table, Button} from 'react-bootstrap'
+import {Table} from 'react-bootstrap'
 
-function TableComponent(props) {
+function TableComponent (props) { 
+
+    
+
     return (
         <>
-            <div style={{backgroundColor:'#464F41'}}>
-                <div className='bg-dark text-light p-2 mb-1'>
+            <div style={{ backgroundColor: '#464F41' }}>
+                <div className='bg-dark text-light p-4 mb-1'>
                     <div className="container-fluid text-center text-md-left">
                         <div className="row">
                             <div className="col-md-12 mt-md-0 mt-3">
@@ -19,22 +22,19 @@ function TableComponent(props) {
                 <Table striped bordered hover variant="dark">
                     <thead>
                         <tr>
-                            <th>#</th>
+                            <th>ID</th>
                             <th>First Name</th>
                             <th>Last Name</th>
-                            <th>Username</th>
                         </tr>
                     </thead>
                     <tbody>
                         {props.colaboradores.map((colaborador) => (
                             <tr key={colaborador.id}>
-                            <td>{colaborador.id}</td>
-                            <td>{colaborador.nombre}</td>
-                            <td>{colaborador.correo}</td>
-                            <td><Button variant="danger" onClick={props.eliminarColaborador}>Eliminar</Button></td>
+                                <td>{colaborador.id}</td>
+                                <td>{colaborador.nombre}</td>
+                                <td>{colaborador.correo}</td>
                             </tr>
                         ))}
-
                     </tbody>
                 </Table>
             </div>
@@ -42,4 +42,4 @@ function TableComponent(props) {
     )
 }
 
-export default TableComponent
+export default TableComponent;
