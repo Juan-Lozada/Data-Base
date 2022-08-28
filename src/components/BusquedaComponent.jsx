@@ -8,7 +8,6 @@ function BodyComponent(props) {
     const inputBuscar = (e) => {
         setBuscarColaborador(e.target.value)
         filtrarBusqueda(e.target.value)
-        console.log('busqueda: ' + e.target.value)
     }
 
     const filtrarBusqueda = (busquedaFinal) => {

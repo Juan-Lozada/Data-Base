@@ -36,7 +36,6 @@ const FormColaboradores = (props) => {
         props.guardarColaborador(colaborador);
         setNombre('')
         setCorreo('')
-        console.log(colaborador)
     }
 
 

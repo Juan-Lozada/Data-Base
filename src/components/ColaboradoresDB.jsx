@@ -21,5 +21,4 @@ const colaboradoresDB = [
     const initialId= () => Math.floor(Math.random()*(max-min+1)+min);
 
     const idDB = () => colaboradoresDB.map((colaborador) => colaborador.id = initialId());
-    console.log(idDB())
 export default colaboradoresDB;
