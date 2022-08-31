@@ -3,7 +3,7 @@ import { Navbar, Container } from 'react-bootstrap'
 
 function FooterComponent() {
     return (
-        <Navbar className="page-footer font-small blue pt-4 bg-dark text-light " fixed="bottom">
+        <Navbar className="page-footer font-small blue pt-2 bg-dark text-light " fixed="bottom">
             <Container className='d-flex flex-column justify-content-center'>
                 <div className="container-fluid text-center text-md-left">
                     <div className="row">

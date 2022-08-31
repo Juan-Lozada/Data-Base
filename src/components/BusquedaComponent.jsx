@@ -4,6 +4,7 @@ import { Button, Navbar, Container, Form, Table, } from 'react-bootstrap';
 function BodyComponent(props) {
 
     const [buscarColaborador, setBuscarColaborador] = useState("");
+    const colaboradores = props.colaboradores;
 
     const inputBuscar = (e) => {
         setBuscarColaborador(e.target.value)
@@ -11,7 +12,7 @@ function BodyComponent(props) {
     }
 
     const filtrarBusqueda = (busquedaFinal) => {
-        const resultadoBuscar = props.colaboradores.filter((colaborador)=>{
+        const resultadoBuscar = colaboradores.filter((colaborador)=>{
             if(colaborador.nombre.toString().toLowerCase().includes(busquedaFinal.toLowerCase())
             ){
                 return colaborador;
